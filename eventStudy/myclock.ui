@@ -15,16 +15,22 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label1">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLCDNumber" name="lcd_hour"/>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcd_min"/>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcd_sec"/>
+     </item>
+    </layout>
    </item>
    <item>
-    <widget class="QLabel" name="label2">
+    <widget class="QPushButton" name="btn_show">
      <property name="text">
-      <string/>
+      <string>show time</string>
      </property>
     </widget>
    </item>

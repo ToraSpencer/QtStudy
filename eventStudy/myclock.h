@@ -4,6 +4,10 @@
 #include <QWidget>
 #include <QTimer>               // 定时器
 #include <QString>
+#include <QTime>
+
+
+
 
 
 
@@ -21,12 +25,16 @@ public:
     explicit myClock(QWidget *parent = 0);
     ~myClock();
 
-protected:
-    void timerEvent(QTimerEvent *);
+public slots:
+    void on_timer_timeout();            // 定时器timeout信号的槽函数
+
+
+private slots:
+    void on_btn_show_clicked();
 
 private:
     Ui::myClock *ui;
-    int timer1, timer2;
+    QTimer *timer1;
 };
 
 #endif // MYCLOCK_H
